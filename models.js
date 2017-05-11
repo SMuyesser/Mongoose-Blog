@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 
 
 const blogPostSchema = mongoose.Schema({
-  title: {type: String, required: true},
-  content: {type: String, required: true},
+  title: {type: String},
+  content: {type: String},
   author: {
-    firstName: {type: String, required: true},
-    lastName: {type: String, require: true}
+    firstName: {type: String},
+    lastName: {type: String}
   },
-  created: {type: String, required: true}
+  created: {type: String}
 });
 
 blogPostSchema.virtual('authorName').get(function() {
@@ -25,6 +25,6 @@ blogPostSchema.methods.apiRepr = function() {
   };
 }
 
-const blogPost = mongoose.model('blogPost', blogPostSchema);
+const BlogPost = mongoose.model('BlogPost', blogPostSchema);
 
 module.exports = {BlogPost};
