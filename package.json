@@ -2,7 +2,7 @@
   "name": "mongoose-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.17.1",
     "chai": "^3.5.0",
